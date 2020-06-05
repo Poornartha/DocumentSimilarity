@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Similarity Checker</title>
+</head>
+<body>
+
+	<form action="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+	</form>
+
+	{% if output %}
+		<h1> Similarity: {{output}} </h1>
+</body>
+</html>
